@@ -46,7 +46,7 @@ def generate_launch_description():
                     launch.substitutions.TextSubstitution(
                         text=os.path.join(
                             get_package_share_directory("leo_hokuyo"),
-                            "launch",
+                            "config",
                             "urg_node_",
                         )
                     ),
