@@ -45,12 +45,16 @@ def generate_launch_description():
 
     launch_rviz = LaunchConfiguration("launch_rviz")
     launch_rviz_cmd = DeclareLaunchArgument(
-        "launch_rviz", default_value="True", description="Whether launch rviz"
+        "launch_rviz",
+        default_value="True",
+        description="Whether launch rviz",
     )
 
     slam = LaunchConfiguration("slam")
     slam_cmd = DeclareLaunchArgument(
-        "slam", default_value="False", description="Whether run a SLAM"
+        "slam",
+        default_value="False",
+        description="Whether run a SLAM",
     )
 
     map_yaml_file = LaunchConfiguration(
@@ -74,22 +78,30 @@ def generate_launch_description():
 
     initial_pose_x = LaunchConfiguration("initial_pose_x")
     initial_pose_x_cmd = DeclareLaunchArgument(
-        "initial_pose_x", default_value="1.336", description="Initial pose x"
+        "initial_pose_x",
+        default_value="1.336",
+        description="Initial pose x",
     )
 
     initial_pose_y = LaunchConfiguration("initial_pose_y")
     initial_pose_y_cmd = DeclareLaunchArgument(
-        "initial_pose_y", default_value="6.544", description="Initial pose y"
+        "initial_pose_y",
+        default_value="6.544",
+        description="Initial pose y",
     )
 
     initial_pose_z = LaunchConfiguration("initial_pose_z")
     initial_pose_z_cmd = DeclareLaunchArgument(
-        "initial_pose_z", default_value="0.0", description="Initial pose z"
+        "initial_pose_z",
+        default_value="0.0",
+        description="Initial pose z",
     )
 
     initial_pose_yaw = LaunchConfiguration("initial_pose_yaw")
     initial_pose_yaw_cmd = DeclareLaunchArgument(
-        "initial_pose_yaw", default_value="0.0", description="Initial pose yaw"
+        "initial_pose_yaw",
+        default_value="0.0",
+        description="Initial pose yaw",
     )
 
     bringup_cmd = IncludeLaunchDescription(
