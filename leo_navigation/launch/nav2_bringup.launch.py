@@ -32,6 +32,7 @@ from launch.actions import (
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
+from launch.conditions import UnlessCondition
 
 
 def generate_launch_description():
@@ -60,7 +61,9 @@ def generate_launch_description():
     map_yaml_file = LaunchConfiguration(
         "map",
         default=os.path.join(
-            bringup_dir, "maps/apartamento_leon", "apartamento_leon_gimp_con_mesa_tv.yaml"
+            bringup_dir,
+            "maps/apartamento_leon",
+            "apartamento_leon_gimp_con_mesa_tv.yaml",
         ),
     )
     map_yaml_cmd = DeclareLaunchArgument(
@@ -131,6 +134,7 @@ def generate_launch_description():
                 "child_frame_id": "base_footprint",
             }
         ],
+        condition=UnlessCondition(use_sim_time),
     )
 
     ld = LaunchDescription()

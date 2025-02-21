@@ -150,7 +150,9 @@ def generate_launch_description():
     )
 
     initial_pose_x_cmd = DeclareLaunchArgument(
-        "initial_pose_x", default_value="1.336", description="Initial pose x"
+        "initial_pose_x",
+        default_value="1.336",
+        description="Initial pose x",
     )
 
     initial_pose_y_cmd = DeclareLaunchArgument(
@@ -237,7 +239,7 @@ def generate_launch_description():
                 arguments=["-d", rviz_config_dir],
                 parameters=[{"use_sim_time": use_sim_time}],
                 # output="log",
-                condition=IfCondition(PythonExpression([launch_rviz])),
+                condition=IfCondition([launch_rviz]),
             ),
         ]
     )
