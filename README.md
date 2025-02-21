@@ -1,11 +1,13 @@
-# leo_common 
+# leo_common
 
 Common ROS packages for Leo Rover that will work no matter on what machine they were run in the ROS network. Usable for both the real robot operation and the simulation.
 
-* [leo] - Metapackage for this repository.
-* [leo_description] - Robot description (URDF model).
-* [leo_msgs] - Message and Service definitions.
-* [leo_teleop] - Scripts for robot's teleoperation.
+- [leo] - Metapackage for this repository.
+- [leo_description] - Robot description (URDF model).
+- [leo_msgs] - Message and Service definitions.
+- [leo_teleop] - Scripts for robot's teleoperation.
+- [leo_navigation] - Navigation2 for Leo Rover.
+- [leo_hokuyo] - Hokuyo launch for Leo Rover.
 
 Visit each package's ROS Wiki page for more information. \
 For more information about the robot, visit [Robots/Leo Rover].

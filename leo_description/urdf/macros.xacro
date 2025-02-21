@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find leo_description)/urdf/sensors/all_sensors.urdf.xacro" />
 
   <xacro:macro name="leo" 
                params="default_antenna:=true
@@ -9,6 +10,10 @@
                        joint_prefix:=''
                        imu_translation:='0.0628 -0.0314 -0.0393'
                        mecanum_wheels:=false">
+
+    <xacro:sensor_hokuyo prefix="${link_prefix}front_laser" parent="${link_prefix}base_link">
+        <origin xyz="0.105 0.0 0.05" rpy="0 0 0"/>
+    </xacro:sensor_hokuyo>
 
     <xacro:macro name="rocker_link" params="name">
       <link name="${link_prefix}rocker_${name}_link">
