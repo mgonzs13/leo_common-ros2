@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>leo_hokuyo</name>
+  <name>leo_asus_xtion</name>
   <version>0.0.0</version>
-  <description>LEO Hokuyo package</description>
+  <description>LEO Asus Xtion package</description>
   <maintainer email="mgons@unileon.es">Miguel Ángel González Santamarta</maintainer>
   <license>MIT</license>
   <buildtool_depend>ament_cmake</buildtool_depend>
-  <depend>urg_node</depend>
+  <depend>openni2_camera</depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>
